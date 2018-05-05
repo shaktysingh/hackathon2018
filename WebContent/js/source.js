@@ -32,10 +32,10 @@ $(function() {
 					});
 
 					if (driverDetails) {
-						if (parseInt(driverDetails.bacValue) <= 5) {
-							$.growl.error({ title: 'Error', size:'large', message: 'Ride Rejected! BAC Value is '+driverDetails.bacValue, location: 'bc' });
+						if (parseInt(driverDetails.bacValue) >= 5) {
+							$.growl.error({ title: 'Ride Rejected', size:'small', message: 'BAC Value is '+driverDetails.bacValue, location: 'bc' });
 						} else {
-							$.growl.notice({ title: 'Success', size:'large', message: 'Ride Accepted! BAC Value is '+driverDetails.bacValue, location: 'bc' });
+							$.growl.notice({ title: 'Ride Accepted', size:'small', message: 'BAC Value is '+driverDetails.bacValue, location: 'bc' });
 						}
 					}
 				}
