@@ -32,7 +32,7 @@ $(function() {
 					});
 
 					if (driverDetails) {
-						if (parseInt(driverDetails.bacValue) >= 5) {
+						if (parseInt(driverDetails.bacValue * 10) >= 5) {
 							$.growl.error({ title: 'Ride Rejected', size:'small', message: 'BAC Value is '+driverDetails.bacValue, location: 'bc' });
 						} else {
 							$.growl.notice({ title: 'Ride Accepted', size:'small', message: 'BAC Value is '+driverDetails.bacValue, location: 'bc' });
